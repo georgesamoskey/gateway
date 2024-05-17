@@ -6,7 +6,7 @@ WORKDIR /gateway
 COPY pom.xml .
 COPY src ./src
 # Build the application using Maven
-RUN mvn  clean package -DskipTests
+RUN mvn  clean package -Dmaven.test.skip=true
 # Use an official OpenJDK image as the base 
 FROM openjdk:17
 # Set the working directory in the con
