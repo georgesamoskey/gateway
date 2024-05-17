@@ -1,0 +1,85 @@
+
+spring:
+  application:
+    name: payall-api-gateway
+  main:
+    web-application-type: reactive
+    allow-bean-definition-overriding: true
+    allow-circular-references: true
+  cloud:
+    gateway:
+      # cors allowed configuration
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Origin Access-Control-Allow-Credentials, RETAIN_UNIQUE
+      globalcors:
+        corsConfigurations:
+          "[/**]":
+            allowedOrigins: "*"
+            allowedHeaders: "*"
+            allowedMethods:
+              - GET
+              - POST
+              - DELETE
+              - PUT
+              - PATCH
+      # microservice routing configuration
+      routes:
+        - id: PAYALL-ASSURANCE-SERVICE
+          uri: lb://PAYALL-ASSURANCE-SERVICE
+          predicates:
+            - Path=/api/assurance/** 
+
+        - id: PAYALL-ADVERTISING-SERVICE
+          uri: lb://PAYALL-ADVERTISING-SERVICE
+          predicates:
+            - Path=/api/advertising/** 
+
+        - id: PAYALL-SCHOOL-FEES-SERVICE
+          uri: lb://PAYALL-SCHOOL-FEES-SERVICE
+          predicates:
+            - Path=/api/school-fees/** 
+
+        - id: PAYALL-ECOMMERCE-LITE-SERVICE
+          uri: lb://PAYALL-ECOMMERCE-LITE-SERVICE
+          predicates:
+            - Path=/api/lite/** 
+
+        - id: PAYALL-DELIVERY-SERVICE
+          uri: lb://PAYALL-DELIVERY-SERVICE
+          predicates:
+            - Path=/api/delivery/** 
+
+        - id: PAYALL-ECOMMERCE-SERVICE
+          uri: lb://PAYALL-ECOMMERCE-SERVICE
+          predicates:
+            - Path=/api/ecommerce/** 
+      
+
+# client configuration
+server:
+  port: 7090
+
+eureka:
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://192.168.20.38:8761/eureka/
+# feign:
+#   circuitbreaker:
+#     enabled: true
+
+# for logging
+logging:
+  level:
+    root: INFO
+    org:
+      springframework:
+        cloud:
+          gateway: TRACE
+          route:
+            RouteDefinitionLocator: INFO
