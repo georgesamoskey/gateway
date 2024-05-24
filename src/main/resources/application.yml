@@ -53,6 +53,11 @@ spring:
           uri: lb://PAYALL-ECOMMERCE-SERVICE
           predicates:
             - Path=/api/ecommerce/** 
+
+        - id: PAYALL-SERVICE-MANAGER-SERVICE
+          uri: lb://PAYALL-SERVICE-MANAGER-SERVICE
+          predicates:
+            - Path=/api/service/** 
       
 
 # client configuration
