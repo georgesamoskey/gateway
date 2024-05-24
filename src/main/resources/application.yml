@@ -39,6 +39,11 @@ spring:
           predicates:
             - Path=/api/school-fees/** 
 
+        - id: PAYALL-SCHOOL-FEES-ACADEMIC-SERVICE
+          uri: lb://PAYALL-SCHOOL-FEES-ACADEMIC-SERVICE
+          predicates:
+            - Path=/api/school-fees-academic/** 
+
         - id: PAYALL-ECOMMERCE-LITE-SERVICE
           uri: lb://PAYALL-ECOMMERCE-LITE-SERVICE
           predicates:
