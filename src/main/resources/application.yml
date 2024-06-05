@@ -63,6 +63,11 @@ spring:
           uri: lb://PAYALL-SERVICE-MANAGER-SERVICE
           predicates:
             - Path=/api/service/** 
+
+        - id: PAYALL-CHAT-SERVICE
+          uri: lb://PAYALL-CHAT-SERVICE
+          predicates:
+            - Path=/api/chat/** 
       
 
 # client configuration
