@@ -39,7 +39,7 @@ spring:
           predicates:
             - Path=/api/school-fees/** 
 
-        - id: PAYALL-SCHOOL-FEES-ACADEMIC-SERVICE
+        - id: PAYALL-SCHOOL-FEES-ACADEMIC-SERVICE	
           uri: lb://PAYALL-SCHOOL-FEES-ACADEMIC-SERVICE
           predicates:
             - Path=/api/school-fees-academic/** 
@@ -83,7 +83,7 @@ eureka:
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
-      defaultZone: http://192.168.20.38:8761/eureka/
+      defaultZone: http://192.168.40.57:8761/eureka/
 # feign:
 #   circuitbreaker:
 #     enabled: true
