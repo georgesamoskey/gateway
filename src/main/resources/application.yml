@@ -86,7 +86,6 @@ eureka:
       defaultZone: http://192.168.40.57:8761/eureka/
 # feign:
 #   circuitbreaker:
-#     enabled: true
 
 # for logging
 logging:
