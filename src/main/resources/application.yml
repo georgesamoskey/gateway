@@ -22,7 +22,7 @@ spring:
               - DELETE
               - PUT
               - PATCH
-      # microservice routing configuration
+      # microservice routing configurations
       routes:
         - id: PAYALL-ASSURANCE-SERVICE
           uri: lb://PAYALL-ASSURANCE-SERVICE
