@@ -6,6 +6,10 @@ services:
     restart: always
     ports:
       - "7090:7090"
+    environment:
+      - eureka.instance.preferIpAddress=true
+      - eureka.client.service-url.defaultZone=http://payall-serveur-decouverte-service:8761/eureka
+      
     networks:
       - eureka-network
     # depends_on:
