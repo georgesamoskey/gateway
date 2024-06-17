@@ -70,7 +70,7 @@ spring:
             - Path=/api/chat/** 
       
 
-# client configuration
+# client configurations
 server:
   port: 7090
 
