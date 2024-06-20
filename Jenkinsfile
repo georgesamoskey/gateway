@@ -17,6 +17,7 @@ pipeline {
     }
     stage(" Deploiement de container ") {
      steps {
+             sh 'docker compose down'
              sh 'docker compose up -d  --no-color --wait'
              sh 'docker compose ps'
         }
