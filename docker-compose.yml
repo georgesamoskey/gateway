@@ -11,8 +11,8 @@ services:
       - eureka.instance.preferIpAddress=true
       - eureka.client.service-url.defaultZone=http://payall-serveur-decouverte-service:8761/eureka
       
-    # networks:
-    #   - eureka-network
+    networks:
+      - eureka-network
     # depends_on:
     #   - payall-serveur-decouverte-service
 
