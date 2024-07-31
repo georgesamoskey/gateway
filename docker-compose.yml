@@ -16,6 +16,6 @@ services:
     # depends_on:
     #   - payall-serveur-decouverte-service
 
-networks:
-  eureka-network:
-    external: true
+# networks:
+#   eureka-network:
+#     external: true
