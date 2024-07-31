@@ -4,6 +4,7 @@ services:
     container_name: payall-gateway-service
     image: asyst-payall-gateway:latest
     restart: always
+    build: .
     ports:
       - "7090:7090"
     environment:
