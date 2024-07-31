@@ -1,4 +1,4 @@
-version: '3.8'
+# version: '3.8'
 services:
   payall-gateway-service:
     container_name: payall-gateway-service
@@ -16,6 +16,6 @@ services:
     # depends_on:
     #   - payall-serveur-decouverte-service
 
-# networks:
-#   eureka-network:
-#     external: true
+networks:
+  eureka-network:
+    external: true
