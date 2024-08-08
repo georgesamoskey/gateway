@@ -8,7 +8,7 @@ spring:
     allow-circular-references: true
   cloud:
     gateway:
-      # cors allowed configuration
+      # cors allowed configurations
       default-filters:
         - DedupeResponseHeader=Access-Control-Allow-Origin Access-Control-Allow-Credentials, RETAIN_UNIQUE
       globalcors:
@@ -33,11 +33,6 @@ spring:
           uri: lb://PAYALL-ADVERTISING-SERVICE
           predicates:
             - Path=/api/advertising/** 
-
-        # - id: PAYALL-SCHOOL-FEES-SERVICE
-        #   uri: lb://PAYALL-SCHOOL-FEES-SERVICE
-        #   predicates:
-        #     - Path=/api/school-fees/** 
 
         - id: PAYALL-SCHOOL-FEES-ACADEMIC-SERVICE	
           uri: lb://PAYALL-SCHOOL-FEES-ACADEMIC-SERVICE
@@ -90,9 +85,7 @@ eureka:
     serviceUrl:
       defaultZone: http://192.168.20.19:8761/eureka/
 # feign:
-#   circuitbreaker:
 
-# for loggingg
 logging:
   level:
     root: INFO
