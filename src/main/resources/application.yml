@@ -75,7 +75,7 @@ spring:
             - Path=/api/notification/** 
       
 
-# client configurations
+# client configurationss
 server:
   port: 7090
 
