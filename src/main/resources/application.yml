@@ -72,7 +72,7 @@ spring:
         - id: PAYALL-NOTIFICATION-SERVICE	
           uri: lb://PAYALL-NOTIFICATION-SERVICE
           predicates:
-            - Path=/api/notifiation/** 
+            - Path=/api/notification/** 
       
 
 # client configurations
