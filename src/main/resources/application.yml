@@ -68,6 +68,11 @@ spring:
           uri: lb://PAYALL-CHAT-SERVICE
           predicates:
             - Path=/api/chat/** 
+
+        - id: PAYALL-NOTIFICATION-SERVICE	
+          uri: lb://PAYALL-NOTIFICATION-SERVICE
+          predicates:
+            - Path=/api/notifiation/** 
       
 
 # client configurations
