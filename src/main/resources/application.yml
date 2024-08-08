@@ -92,7 +92,7 @@ eureka:
 # feign:
 #   circuitbreaker:
 
-# for logging
+# for loggingg
 logging:
   level:
     root: INFO
