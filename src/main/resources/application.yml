@@ -60,7 +60,7 @@ spring:
             - Path=/api/manager/** 
 
         - id: PAYALL-CHAT-SERVICE
-          uri: lb://PAYALL-CHAT-SERVICE
+          uri: lb:ws://192.168.20.19:3011
           predicates:
             - Path=/api/chat/** 
 
@@ -68,6 +68,11 @@ spring:
           uri: lb://PAYALL-NOTIFICATION-SERVICE
           predicates:
             - Path=/api/notification/** 
+
+        - id: PAYALL-APPOINTEMENT-SERVICE		
+          uri: lb://PAYALL-APPOINTEMENT-SERVICE	
+          predicates:
+            - Path=/api/appointement/** 
       
 
 # client configurationss
