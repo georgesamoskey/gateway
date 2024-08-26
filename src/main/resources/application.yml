@@ -77,10 +77,10 @@ spring:
         - id: PAYALL-UPLOAD-SERVICE		
           uri: lb://PAYALL-UPLOAD-SERVICE	
           predicates:
-          - Path=/api/upload** 
+            - Path=/api/upload/** 
       
 
-# client configurationss
+# client configurations
 server:
   port: 7090
 
