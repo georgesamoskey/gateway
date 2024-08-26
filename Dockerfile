@@ -11,7 +11,7 @@ RUN mvn  clean package -Dmaven.test.skip=true
 FROM openjdk:17
 # Set the working directory in the con
 WORKDIR /gateway
-# Copy the built JAR file from the previous stage to the containers
+# Copy the built JAR file from the previous stage
 COPY --from=build /gateway/target/*.jar app.jar
 
 # Set the command to run the applications

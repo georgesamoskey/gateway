@@ -14,7 +14,6 @@ services:
       - eureka-network
     # depends_on:
     #   - payall-serveur-decouverte-service
-    #   - payall-serveur-decouverte-service
 
 networks:
   eureka-network:
