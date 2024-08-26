@@ -80,7 +80,7 @@ spring:
             - Path=/api/upload/** 
       
 
-# client configurations
+# client configurations dta check
 server:
   port: 7090
 
