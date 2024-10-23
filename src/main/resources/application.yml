@@ -78,6 +78,16 @@ spring:
           uri: lb://PAYALL-UPLOAD-SERVICE	
           predicates:
             - Path=/api/upload/** 
+
+        - id: PAYALL-GESTION-STOCK-SERVICE		
+          uri: lb://PAYALL-GESTION-STOCK-SERVICE	
+          predicates:
+            - Path=/api/gestion-stock/** 
+
+        - id: PAYALL-GESTION-COMMANDE-SERVICE		
+          uri: lb://PAYALL-GESTION-COMMANDE-SERVICE	
+          predicates:
+            - Path=/api/gestion-commande/**
       
 
 # client configurations dta check
