@@ -88,6 +88,11 @@ spring:
           uri: lb://PAYALL-GESTION-COMMANDE-SERVICE	
           predicates:
             - Path=/api/gestion-commande/**
+
+        - id: PAYALL-UTILITY-ACADEMIC-SERVICE		
+          uri: lb://PAYALL-UTILITY-ACADEMIC-SERVICE	
+          predicates:
+            - Path=/api/school-fees-utility/**
       
 
 # client configurations dta check
