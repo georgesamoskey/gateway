@@ -87,7 +87,12 @@ spring:
         - id: PAYALL-GESTION-COMMANDE-SERVICE		
           uri: lb://PAYALL-GESTION-COMMANDE-SERVICE	
           predicates:
-            - Path=/api/gestion-commande/**
+            - Path=/api/gestion-commande/** 
+
+       - id: PAYALL-RESTO-PARAMETRE-SERVICE			
+          uri: lb://PAYALL-RESTO-PARAMETRE-SERVICE		
+          predicates:
+            - Path=/api/parametre/**
 
         - id: PAYALL-UTILITY-ACADEMIC-SERVICE		
           uri: lb://PAYALL-UTILITY-ACADEMIC-SERVICE	
