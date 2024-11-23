@@ -92,7 +92,7 @@ spring:
         - id: PAYALL-RESTO-PARAMETRE-SERVICE			
           uri: lb://PAYALL-RESTO-PARAMETRE-SERVICE		
           predicates:
-              - Path=/api/parametre/**
+              - Path=/api/gestion-parametre/**
 
         - id: PAYALL-UTILITY-ACADEMIC-SERVICE		
           uri: lb://PAYALL-UTILITY-ACADEMIC-SERVICE	
