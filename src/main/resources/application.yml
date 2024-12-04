@@ -105,7 +105,7 @@ spring:
             - Path=/api/school-fees/**
       
 
-# client configurations dta checks
+# client configurations dta check
 server:
   port: 7090
 
