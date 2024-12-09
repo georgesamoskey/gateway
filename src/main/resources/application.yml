@@ -103,6 +103,11 @@ spring:
           uri: lb://PAYALL-SCHOOL-FEES-ACADEMIC-SERVICE		
           predicates:
             - Path=/api/school-fees/**
+
+        - id: PAYALL-ASSURANCE-SERVICE-SERVICE			
+          uri: lb://PAYALL-ASSURANCE-SERVICE-SERVICE		
+          predicates:
+            - Path=/api/assurance-broker/**
       
 
 # client configurations dta check
