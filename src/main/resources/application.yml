@@ -108,6 +108,16 @@ spring:
           uri: lb://PAYALL-ASSURANCE-SERVICE-SERVICE		
           predicates:
             - Path=/api/assurance-broker/**
+
+        - id: PAYALL-CHAT-SETTING-SERVICE			
+          uri: lb://PAYALL-CHAT-SETTING-SERVICE		
+          predicates:
+            - Path=/api/chat-setting/**
+
+        - id: PAYALL-CHAT-STORIE-SERVICE			
+          uri: lb://PAYALL-CHAT-STORIE-SERVICE	
+          predicates:
+            - Path=/api/chat-storie/**
       
 
 # client configurations dta check
