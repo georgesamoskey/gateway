@@ -59,10 +59,10 @@ spring:
           predicates:
             - Path=/api/manager/** 
 
-        - id: PAYALL-CHAT-SERVICE
-          uri: lb://PAYALL-CHAT-SERVICE
+        - id: WAANGU-CHAT-SERVICE-MESSAGE
+          uri: lb://WAANGU-CHAT-SERVICE-MESSAGE
           predicates:
-            - Path=/api/chat/** 
+            - Path=/api/chat-message/** 
 
         - id: PAYALL-NOTIFICATION-SERVICE	
           uri: lb://PAYALL-NOTIFICATION-SERVICE
